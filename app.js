@@ -15,11 +15,9 @@ function imageLoader() {
     if (imageLoaded === totalImages) {
         ready = true
         loader.hidden = true
-        console.log('ready', ready)
     }
     else {
         ready = false
-        console.log('ready', ready)
     }
 }
 
@@ -34,7 +32,6 @@ function setAttributes(element, attributes) {
 function displatPhotos() {
     imageLoaded = 0
     totalImages = photosArray.length
-    console.log("TCL ~ file: app.js ~ line 31 ~ displatPhotos ~ totalImages", totalImages)
     photosArray.forEach((photo) => {
         const item = document.createElement('a')
         // item.setAttribute('href', photo.links.html)
@@ -76,6 +73,5 @@ window.addEventListener('scroll', () => {
     if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 1000 && ready) {
         getPhotos()
         ready = false
-        console.log('scroolled')
     }
 })
